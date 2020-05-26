@@ -15,5 +15,4 @@ describe 'Albums API' do
 
     expect(albums.count).to eq(2)
   end
-  
 end

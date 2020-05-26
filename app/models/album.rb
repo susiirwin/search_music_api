@@ -20,8 +20,5 @@ class Album < ApplicationRecord
       top_albums << album
     end
     top_albums
-
   end
-
- 
 end
