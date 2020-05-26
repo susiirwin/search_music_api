@@ -1,8 +1,14 @@
 class Api::V1::AlbumDetailsController < ApplicationController
   
   def show
-    album_details = Albumdetail.find_album_details(params[:artist_name])
-    render json: album_details
+    complete_album_details = Albumdetail.find_album_details(album_params)
+    render json: complete_album_details
+  end
+
+  private
+
+  def album_params
+    params.permit(:artist_name, :album_name)
   end
 
 end
