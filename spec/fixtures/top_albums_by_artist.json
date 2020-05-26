@@ -1,0 +1,22 @@
+{
+  "topalbums": {
+    "album": [
+      {
+        "name": "Nevermind",
+        "playcount": 44152678,
+        "mbid": "f7930de3-081a-452a-bafe-f7285a2abb6d",
+        "artist": {
+          "name": "Nirvana"
+        }
+      },
+      {
+        "name": "In Utero",
+        "playcount": 24316004,
+        "mbid": "dc02c14f-b3f2-40c2-a32b-4349f8d5a51f",
+        "artist": {
+          "name": "Nirvana"
+        }
+      }
+    ]
+  }
+}

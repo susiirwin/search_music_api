@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2020_05_25_032857) do
   create_table "albums", force: :cascade do |t|
     t.string "album_name"
     t.string "artist_name"
+    t.integer "album_playcount"
+    t.string "album_mbid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

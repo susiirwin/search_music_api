@@ -3,10 +3,9 @@ require 'pry'
 
 describe 'Albums API' do
   it 'gets a list of Top Albums by an Artist' do
-
-    album1 = Album.create(album_name: "Nevermind", artist_name: "Nirvana")
-    album2 = Album.create(album_name: "Bleach", artist_name:  "Nirvana")
-    album3 = Album.create(album_name: "Help", artist_name:  "The Beatles")
+    json_response = File.read('spec/fixtures/top_albums_by_artist.json')
+    stub_request(:get, "http://ws.audioscrobbler.com/2.0/?api_key=#{ENV["LASTFM_API_KEY"]}&artist=Nirvana&format=json&method=artist.gettopalbums").
+         to_return(status: 200, body: json_response, headers: {})
 
     get "/api/v1/albums?artist_name=Nirvana"
 
@@ -16,5 +15,5 @@ describe 'Albums API' do
 
     expect(albums.count).to eq(2)
   end
-
+  
 end
