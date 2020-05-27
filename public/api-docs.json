@@ -1,0 +1,16 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "apis": [
+
+  ],
+  "authorizations": null,
+  "info": {
+    "title": "Search Music API",
+    "description": "A pared down interface for the LastFM API",
+    "contact": "susi.irwin@gmail.com",
+    "license": "Apache 2.0",
+    "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0.html"
+  }
+}

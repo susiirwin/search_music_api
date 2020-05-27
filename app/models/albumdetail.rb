@@ -3,6 +3,7 @@ class Albumdetail < ApplicationRecord
   def self.find_album_details(artist_params)
     artist_name = artist_params["artist_name"]
     album_name = artist_params["album_name"]
+      
     conn = Faraday.new(:url => 'http://ws.audioscrobbler.com/2.0/')
     response = conn.get do |req|                     
       req.params['method'] = "album.getinfo"

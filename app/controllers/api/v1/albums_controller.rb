@@ -2,7 +2,7 @@ class Api::V1::AlbumsController < ApplicationController
   
   def index
     top_albums_by_artist = Album.find_top_albums_for_artist(params[:artist_name])
-    render json: top_albums_by_artist
+    render json: top_albums_by_artist, status: 200
   end
 
 end

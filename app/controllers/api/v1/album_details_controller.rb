@@ -2,7 +2,7 @@ class Api::V1::AlbumDetailsController < ApplicationController
   
   def show
     complete_album_details = Albumdetail.find_album_details(album_params)
-    render json: complete_album_details
+    render json: complete_album_details, status: 200
   end
 
   private

@@ -9,8 +9,9 @@ describe 'Album Details API' do
 
     get "/api/v1/albumdetails?artist_name=Nirvana&album_name=Bleach"
     
-    expect(response).to be_successful
+    expect(response).to have_http_status(200)
     album_details = JSON.parse(response.body)
     expect(album_details["album_mbid"]).to eq("d3d44548-b2ed-3ddc-a9e0-3f5ee544c1c9")
   end
+
 end
