@@ -1,6 +1,6 @@
 # README
 
-[`Search_Music_Api`](https://obscure-citadel-19523.herokuapp.com/api/v1/) is a RESTFUL JSON Rails API which models artists and albums. This API consumes the [Last.fm API](https://www.last.fm/api/) and hits the follow LastFM endpoints:
+[`Search_Music_Api`](https://obscure-citadel-19523.herokuapp.com/api/v1/) is a RESTFUL JSON Rails API which models artists and albums. This API consumes the [LastFM API](https://www.last.fm/api/) and hits the following LastFM endpoints:
 
     artist.getInfo
     artist.getTopAlbums
@@ -8,13 +8,24 @@
 
 
 ## To set up the Search Music API application:
-  1. Clone the repo:
-    `git clone git@github.com:susiirwin/search_music_api.git`
-  2. `cd` into the `search_music_api` project
-  3. run `bundle install`
-  4. Create and migrate the database by running `rails db:create db:migrate`.
-  5. Run you Rails server: in the terminal window, run `rails s`.
-  6. Open your browser to `localhost:3000/api/v1/` to get started. 
+
+First, clone the repository. Using SSH:
+```
+git clone git@github.com:susiirwin/search_music_api.git
+```
+Using HTTPS:
+```
+git clone https://github.com/susiirwin/search_music_api.git
+```
+
+Then run the following commands to set up the application:
+```
+cd search_music_api
+bundle install
+rails db:create db:migrate
+rails s
+```
+To use the app, open a browser window to `http://localhost:3000/api/v1/`.
 
 
 ## API Details:
